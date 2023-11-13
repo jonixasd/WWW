@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+}
+
+header {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  background: white;
+  width: 100vw;
+  height: 76px;
+  box-shadow: #2222227e 0px 15px 29px 0px;
+}
+
+#nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  padding: 13px 170px 13px 170px;
+}
+
+#nav ul {
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+}
+
+#nav i {
+  margin-right: 5px;
+}
+
+/* nav-logo */
+.nav-logo {
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  font-size: 20px;
+  color: #222;
+}
+
+.nav-logo:hover {
+  color: #222;
+  text-decoration: none;
+}
+
+.nav-logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+/* nav-links */
+.nav-links {
+  color: #222;
+  letter-spacing: 3px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-links:hover {
+  text-decoration: none;
+  color: #222222ab;
+  transition: 0.2 ease-in-out;
+}
+
+/* login-btn */
+
+.login-btn {
+  padding: 10px 40px 10px 40px;
+  border-radius: 8px;
+  background: linear-gradient(#47b3f3, #0e34af);
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  color: #eeedec;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 5px;
+}
+
+.login-btn:hover {
+  text-decoration: none;
+  color: #eeedec;
+  background-color: #0b257a;
+  transform: translate(0, -3px);
+  transition: 0.2s ease-in-out;
+  box-shadow: #0e34afa8 0px 15px 29px 0px;
+}
+
+/* toggle btn */
+.toggle_btn,
+.close_btn {
+  display: none;
+  cursor: pointer;
+}
+
+#menu_nav {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 40px 13px 13px;
+}
+
+.nav_logo {
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  font-size: 20px;
+  color: #222;
+}
+
+.nav_logo:hover {
+  color: #222;
+  text-decoration: none;
+}
+
+.nav_logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+/* navRWD */
+
+@media (max-width: 1500px) {
+  .nav-links,
+  .login-btn,
+  #nav {
+    display: none;
+  }
+  .toggle_btn,
+  .login-btn-drop,
+  #menu_nav {
+    display: flex;
+  }
+}
+
+/* dropdown */
+
+.dropdown_menu {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.623);
+  backdrop-filter: blur(10px);
+  height: 380px;
+  width: 100%;
+  text-align: center;
+  box-shadow: #2222227e 0px 10px 30px 0px;
+}
+
+.dropdown_menu li {
+  margin-top: 15px;
+}
+
+.nav-links-drop {
+  color: #222;
+  letter-spacing: 3px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-links-drop i {
+  margin: 0px 10px 0px 10px;
+}
+
+.nav-links-drop:hover {
+  text-decoration: none;
+  color: #222222b4;
+  transition: 0.2s ease-in-out;
+}
+/* carousel */
+.carousel-lists {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 15;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  padding-left: 0;
+  list-style: none;
+  margin: 0px 60px 60px 0px;
+}
+
+.carousel-lists .active {
+  opacity: 1;
+}
+.carousel-lists > li {
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 0.6s ease;
+  transition: 0.3s ease-in-out;
+}
+
+.carousel-list > li:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: opacity 0.6s ease;
+  transition: 0.3s ease-in-out;
+  transform: translate(0, -3px);
+  box-shadow: #2222227e 0px 15px 29px 0px;
+}
+
+.carousel-object > img {
+  width: 10vmin;
+  height: 10vmin;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: #222222cc 0px 15px 29px 0px;
+}
+
+.item-text {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-wrap: break-word;
+}
+
+.item-text-content {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.carousel-item {
+  height: 940px;
+}
+
+.slide-1 {
+  background-image: url(./image-active/list-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slide-2 {
+  background-image: url(./image-active/list-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slide-3 {
+  background-image: url(./image-active/list-3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.heading-sec {
+  display: flex;
+  height: fit-content;
+}
